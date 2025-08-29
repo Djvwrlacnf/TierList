@@ -1,0 +1,179 @@
+.tier-rank {
+  width: 80px;
+  font-weight: bold;
+  font-size: 1.2rem;
+  vertical-align: top;
+  border-right: 2px solid #ccc;
+  padding: 10px 5px;
+  text-align: center;
+}
+
+
+.tier-items {
+  padding: 10px;
+  background-color: #495057;
+  min-height: 70px;
+}
+
+.item-card {
+  margin: 5px;
+  display: inline-block;
+  width: 120px;
+  vertical-align: top;
+  cursor: pointer;
+  color: #fff;
+  text-align: center;
+  user-select: none;
+}
+
+.item-card img {
+  width: 100%;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 6px;
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.item-card:hover img {
+  border-color: #dc3545;
+  /* красный акцент при наведении */
+}
+
+
+.rank-letter-S {
+  color: #ff4c4c !important;
+}
+
+.rank-letter-A {
+  color: #ff9900 !important;
+}
+
+.rank-letter-B {
+  color: #f5d300 !important;
+}
+
+.rank-letter-C {
+  color: #4caf50 !important;
+}
+
+.rank-letter-D {
+  color: #00c4ff !important;
+}
+
+.rank-letter-E {
+  color: #3f51b5 !important;
+}
+
+.rank-letter-F {
+  color: #9c27b0 !important;
+}
+
+/* Неактивные вкладки белые */
+.nav-tabs .nav-link {
+  color: white;
+}
+
+/* Активная вкладка — красный текст и красная линия снизу */
+.nav-tabs {
+  border-bottom: 1px solid #dc3545 !important;
+}
+
+.nav-tabs .nav-link.active {
+  color: #dc3545 !important;
+  border-color: #dc3545 #dc3545 transparent !important;
+}
+
+/* СЛАЙДЕР */
+
+/* Контейнер-слайдер */
+.slider-container {
+  display: flex !important;
+  overflow-x: auto !important;
+  gap: 1rem !important;
+  padding-bottom: 0.5rem !important;
+  scroll-snap-type: x mandatory !important;
+}
+
+.slider-container::-webkit-scrollbar {
+  height: 8px !important;
+}
+
+.slider-container::-webkit-scrollbar-thumb {
+  background-color: #888 !important;
+  border-radius: 4px !important;
+}
+
+/* Элемент слайдера */
+.slider-item {
+  position: relative !important;
+  flex: 0 0 auto !important;
+  scroll-snap-align: start !important;
+}
+
+/* Изображение */
+.slider-item img {
+  display: block !important;
+  height: auto !important;
+  max-height: 280px !important; /* Больше на ПК */
+  object-fit: contain !important;
+  border-radius: 8px !important;
+  border: 2px solid #ccc !important;
+}
+
+/* Кнопка удаления */
+.delete-image-btn {
+  position: absolute !important;
+  top: 10px !important;
+  right: 10px !important;
+  background: rgba(255, 0, 0, 0.8) !important;
+  border: none !important;
+  color: white !important;
+  font-weight: bold !important;
+  border-radius: 0.375rem !important;
+  width: 30px !important;
+  height: 30px !important;
+  cursor: pointer !important;
+  padding: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  font-size: 20px !important;
+  opacity: 0 !important;
+  transition: opacity 0.2s ease !important;
+  z-index: 1 !important;
+}
+
+
+/* Сам крестик (можно двигать вручную) */
+.delete-image-btn span {
+  display: block;
+  transform: translate(0px, 0px); /* ← Меняй тут положение крестика вручную */
+}
+
+/* Показывать кнопку при наведении */
+.slider-item:hover .delete-image-btn {
+  opacity: 1 !important;
+}
+
+/* Эффект наведения */
+.delete-image-btn:hover {
+  background: rgba(255, 0, 0, 1) !important;
+}
+
+/* 📱 Мобильная адаптация */
+@media (max-width: 768px) {
+  .slider-item img {
+    max-height: 180px !important;
+  }
+
+  .delete-image-btn {
+    width: 26px !important;
+    height: 26px !important;
+    font-size: 16px !important;
+  }
+
+  .delete-image-btn span {
+    transform: translate(10px, -10px) !important; /* При желании можно задать другие значения */
+  }
+}

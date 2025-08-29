@@ -1,0 +1,210 @@
+:root {
+  --bs-body-bg: #121212;
+  --bs-body-color: #e0e0e0;
+  --bs-primary: #d32f2f;
+  --bs-secondary-bg: #212121;
+  --bs-navbar-bg: #1f1f1f;
+  --bs-secondary-color: #aaaaaa;
+}
+
+/* Навигация */
+.navbar-dark {
+  background-color: var(--bs-navbar-bg);
+}
+
+/* Кнопки с primary */
+.btn-primary {
+  background-color: var(--bs-primary);
+  border-color: var(--bs-primary);
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+  background-color: #b71c1c;
+  border-color: #b71c1c;
+}
+
+.btn-primary:active,
+.btn-primary.active,
+.show > .btn-primary.dropdown-toggle {
+  background-color: #a81919 !important;
+  border-color: #a81919 !important;
+  box-shadow: none !important;
+  outline: none !important;
+  filter: none !important;
+  -webkit-box-shadow: none !important;
+  -webkit-tap-highlight-color: transparent !important; /* для мобильных */
+}
+
+
+/* Фон для карточек и блоков */
+.card,
+.container-secondary {
+  background-color: var(--bs-secondary-bg);
+  color: var(--bs-body-color);
+}
+
+input[type='file']::file-selector-button,
+input[type='file']::-webkit-file-upload-button {
+  color: #23272b !important;
+  /* тёмно-серый, как в .tier-items background */
+  background-color: #dee2e6 !important;
+  /* светло-серый, чтобы выделялся на фоне */
+  border: 1px solid #495057 !important;
+  border-radius: 4px !important;
+  padding: 0.375rem 0.75rem !important;
+  transition: background 0.2s, color 0.2s !important;
+}
+
+input[type='file']:hover::file-selector-button,
+input[type='file']:hover::-webkit-file-upload-button {
+  background-color: #495057 !important;
+  /* основной тёмный цвет */
+  color: #fff !important;
+  border-color: #23272b !important;
+}
+
+.item-card>div {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#reply-info>div {
+  background-color: #495057;
+  color: white;
+  padding: 0.5rem 0.75rem;
+  border-radius: 0.375rem;
+  /* скругление примерно как в Bootstrap */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#reply-info button {
+  border-color: white;
+  color: white;
+}
+
+#reply-info button:hover {
+  background-color: white;
+  color: #495057;
+}
+
+/* ----------------------------------АДМИНКА---------------------------------- */
+:root {
+  --bs-body-bg: #121212;
+  --bs-body-color: #e0e0e0;
+  --bs-primary: #d32f2f;
+  --bs-secondary-bg: #212121;
+  --bs-navbar-bg: #1f1f1f;
+  --bs-secondary-color: #aaaaaa;
+
+  /* Добавим нужный нам серый для границ таблицы */
+  --bs-table-border-color: #495057;
+}
+
+/* Общий фон и цвет текста таблицы */
+.table {
+  color: var(--bs-body-color);
+  background-color: var(--bs-secondary-bg);
+}
+
+/* Цвет заголовков таблицы */
+.table thead {
+  background-color: #1f1f1f;
+  color: #aaaaaa;
+  border-color: #495057;
+}
+
+/* Цвет границ таблицы */
+.table-bordered> :not(caption)>* {
+  border-color: #495057;
+}
+
+/* Навигационное меню в админке */
+.sidebar {
+  background-color: #121212 !important;
+}
+
+/* Ссылки в навигации */
+.sidebar .nav-link {
+  color: #fff;
+  transition: background-color 0.2s;
+}
+
+/* При наведении */
+.sidebar .nav-link:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+/* Активная ссылка */
+.sidebar .nav-link.active {
+  background-color: #b71c1c;
+  color: #fff !important;
+}
+
+/* Принудительно белый текст в таблице */
+.table td,
+.table th {
+  color: var(--bs-body-color) !important;
+}
+
+.table-light {
+  --bs-table-bg: #1f1f1f !important;
+}
+
+/* ----------------------------------АДМИНКА-END---------------------------------- */
+
+/* ----------------КОММЕНТАРИИ ПОДСВЕТКА-------------------- */
+.highlight-comment {
+  border: 2px solid #b71c1c !important;
+  transition: border 0.3s ease;
+}
+
+/* ----------------КОММЕНТАРИИ ПОДСВЕТКА END---------------- */
+
+
+.mobile-sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 250px;
+  height: 100vh;
+  overflow-y: auto;
+  background-color: #f8f9fa;
+  box-shadow: 2px 0 5px rgba(0,0,0,0.3);
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  z-index: 1099;
+}
+
+.mobile-sidebar.show {
+  transform: translateX(0);
+}
+
+.mobile-sidebar-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 1098;
+  display: none;
+}
+
+.mobile-sidebar-overlay.show {
+  display: block;
+}
+
+.custom-sidebar {
+    background-color: #121212;
+}
+
+.custom-sidebar .nav-link {
+    color: #fff;
+}
+
+.custom-sidebar .nav-link.active {
+    color: #b71c1c;
+    font-weight: bold;
+}
